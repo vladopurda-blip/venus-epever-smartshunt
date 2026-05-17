@@ -7,13 +7,13 @@ mkdir -p /data/epever
 cd /data/epever || exit
 
 wget -O dbus-epever-battery.py \
-https://raw.githubusercontent.com/TVOJ_USERNAME/venus-epever-smartshunt/main/battery/dbus-epever-battery.py
+https://raw.githubusercontent.com/vladopurda-blip/venus-epever-smartshunt/main/battery/dbus-epever-battery.py
 
 wget -O dbus-epever-solarcharger.py \
-https://raw.githubusercontent.com/TVOJ_USERNAME/venus-epever-smartshunt/main/solar/dbus-epever-solarcharger.py
+https://raw.githubusercontent.com/vladopurda-blip/venus-epever-smartshunt/main/solar/dbus-epever-solarcharger.py
 
 wget -O start.sh \
-https://raw.githubusercontent.com/TVOJ_USERNAME/venus-epever-smartshunt/main/start.sh
+https://raw.githubusercontent.com/vladopurda-blip/venus-epever-smartshunt/main/start.sh
 
 chmod +x start.sh
 chmod +x dbus-epever-battery.py
