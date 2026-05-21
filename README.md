@@ -27,14 +27,6 @@ DIY Victron-style battery monitor + solar integration for Venus OS using Epever 
 
 ## Install
 
-Na Raspberry v repozitári spusti:
-
-````bash
-cd /data/venus-epever-smartshunt
-
-cat > README.md <<'EOF'
-# Venus OS Epever SmartShunt + Solar Charger
-
 Custom Venus OS DBus integration for Epever MPPT controllers on Victron Venus OS.
 
 This project exposes Epever data inside Victron Venus OS / VRM as:
