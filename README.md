@@ -27,15 +27,58 @@ DIY Victron-style battery monitor + solar integration for Venus OS using Epever 
 
 ## Install
 
-```bash
-wget -O - https://raw.githubusercontent.com/TVOJ_USERNAME/venus-epever-smartshunt/main/install.sh | sh
+Na Raspberry v repozitári spusti:
 
+````bash
+cd /data/venus-epever-smartshunt
 
-Notes
+cat > README.md <<'EOF'
+# Venus OS Epever SmartShunt + Solar Charger
 
-This project creates a virtual Victron battery monitor using Epever battery data.
+Custom Venus OS DBus integration for Epever MPPT controllers on Victron Venus OS.
 
-SOC values are estimated from:
+This project exposes Epever data inside Victron Venus OS / VRM as:
+
+- Solar Charger
+- Calculated SmartShunt battery monitor
+- RAW Epever battery SOC monitor
+
+## Features
+
+- Epever MPPT solar charger integration
+- Battery voltage/current/SOC integration
+- Calculated SmartShunt mode
+- RAW Epever SOC monitor
+- Venus OS dashboard support
+- VRM Portal support
+- Auto start script
+- Works together with Victron inverter on ttyUSB1
+
+## Tested hardware
+
+- Raspberry Pi running Venus OS
+- Epever Tracer series MPPT controller
+- USB RS485 adapter
+- Victron inverter on ttyUSB1
+
+## Services
+
+- `com.victronenergy.solarcharger.ttyUSB0`
+- `com.victronenergy.battery.ttyUSB0`
+
+## Current setup
+
+- Solar charger: `DeviceInstance 290`
+- Main calculated battery monitor: `DeviceInstance 0`
+- RAW Epever battery monitor: `DeviceInstance 291`
+- Victron inverter remains on `ttyUSB1`
+
+## Install
+
+Run on Venus OS:
+
+```sh
+wget -O - https://raw.githubusercontent.com/vladopurda-blip/venus-epever-smartshunt/main/install.sh | sh
 
 controller battery SOC
 voltage
